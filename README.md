@@ -26,7 +26,8 @@ cd student-crud-api
 ```
 ### Create and activate a virtual environment:
 
-``` python3 -m venv venv
+```
+python3 -m venv venv
 source venv/bin/activate  # For Linux/Mac
 venv\Scripts\activate     # For Windows
 ```
@@ -34,12 +35,12 @@ venv\Scripts\activate     # For Windows
 ### Install dependencies:
 
 ```python 
-pip install -r requirements.txt
+pip install flask
 ```
 ### Environment Configuration
 Configure any environment variables needed for the project. Update the .env file with required variables or set them directly in the deployment environment:
 
-FLASK_APP: Set to app.py
+FLASK_APP: Set to REST.py
 FLASK_ENV: Set to development for local testing
 ### Running the API Locally
 After configuring the environment, start the API locally with:
@@ -51,7 +52,7 @@ The API will be available at http://127.0.0.1:5000.
 ### Deployment
 
 1. Set up an Azure Web App Service through the Azure Portal.
-2. Create a publish profile for deployment and add it to your GitHub repository as a secret (AZURE_WEBAPP_PUBLISH_PROFILE).
+2. Create a publish profile for deployment.
 3. Push code changes to GitHub: The CI/CD pipeline will automatically deploy the latest code to Azure Web App (refer to .github/workflows/ci-cd.yml).
 ### CI/CD Pipeline
 This project uses GitHub Actions for CI/CD. The workflow file (.github/workflows/ci-cd.yml) configures automatic deployment to Azure Web App Service upon each push to the main branch.
