@@ -1,0 +1,31 @@
+### Retrieve all students
+GET http://127.0.0.1:5000/students HTTP/1.1
+Accept: application/json
+
+### Retrieve a student by ID
+GET http://127.0.0.1:5000/students/1 HTTP/1.1
+Accept: application/json
+
+### Add a new student
+POST http://127.0.0.1:5000/students HTTP/1.1
+Content-Type: application/json
+
+{
+    "ID": 6,
+    "Name": "Frank Castle",
+    "Grade": "B+",
+    "Email": "frank.castle@example.com"
+}
+
+### Update an existing student
+PUT http://127.0.0.1:5000/students/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Name": "Alice Johnson",
+    "Grade": "A+",
+    "Email": "alice.johnson@updated.com"
+}
+
+### Delete a student by ID
+DELETE http://127.0.0.1:5000/students/6 HTTP/1.1
